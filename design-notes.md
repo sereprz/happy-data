@@ -77,3 +77,8 @@ https://data.unicef.org/topic/education/literacy/
 ## Architecture
 - javascript frontend - React
 - Flask backend
+
+## Numbers
+- number of pictures of cats uploaded to instagram (or twitter) [Jana]
+- how many people are in space right now [Stefi]
+- Random math fact (http://numbersapi.com/?ref=apilist.fun#random/math) [Serena]
