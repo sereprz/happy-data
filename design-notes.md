@@ -82,3 +82,14 @@ https://data.unicef.org/topic/education/literacy/
 - number of pictures of cats uploaded to instagram (or twitter) [Jana]
 - how many people are in space right now [Stefi]
 - Random math fact (http://numbersapi.com/?ref=apilist.fun#random/math) [Serena]
+
+### Twitter
+* [Tweepy](http://www.tweepy.org/): library in python to be used with twitter API
+** [tutorial](http://socialmedia-class.org/twittertutorial.html)
+* doesn't support this use case
+* different websites that offer this data for PR firms for money
+* Free things (no APIs):
+** [track 100 last tweets](https://www.trackmyhashtag.com/preview/overview?_token=WAxLoCFCaLVvYQ3LN0mI21h3jWrGjsUDJjnPrMlo&req_url=https%3A%2F%2Fwww.trackmyhashtag.com&search_keyword=%23cats)
+** [claim to be for free](https://www.talkwalker.com/de/kostenlose-social-media-monitoring-analytics-tools)
+** [last 100 tweets and all tweets in the current hour](https://socialert.net/dashboard#analytics/272041/initindex
+** [Blog post on how to do this with Java](http://jkoder.com/twitter-search-api-get-tweets-and-tweets-count-hashtag-java-client-twitter4j/)
