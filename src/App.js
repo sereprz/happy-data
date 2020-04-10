@@ -4,10 +4,12 @@ import './App.css';
 
 function App() {
   const [currentTime, setCurrentTime] = useState(0);
+  const [message, setMessage] = useState('');
   
   useEffect(() => {
-    fetch('/time').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
+    fetch('/math-fact').then(res => res.json()).then(data => {
+      setCurrentTime(data.number);
+      setMessage(data.message);
     })
   },[]);
 
@@ -16,6 +18,7 @@ function App() {
       <header className="App-header">
         Current Time
         <p>The current time is: {currentTime}</p>
+        <p>{message}</p>
       </header>
     </div>
     );
