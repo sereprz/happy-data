@@ -79,9 +79,9 @@ https://data.unicef.org/topic/education/literacy/
 - Flask backend
 
 ## Numbers
-- number of pictures of cats uploaded to instagram (or twitter) [Jana]
 - how many people are in space right now [Stefi]
 - Random math fact (http://numbersapi.com/?ref=apilist.fun#random/math) [Serena]
+- News https://newsapi.org/docs/endpoints/everything#sources
 
 ### Twitter
 * [Tweepy](http://www.tweepy.org/): library in python to be used with twitter API
