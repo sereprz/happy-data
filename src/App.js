@@ -2,7 +2,7 @@ import React, {
   useState,
   useEffect
 } from 'react';
-import logo from './logo.svg'; //not in use
+
 import './App.css';
 
 function App() {
@@ -10,52 +10,47 @@ function App() {
   const [mathFactMessage, setMathFactMessage] = useState('');
   const [peopleInSpace, setPeopleInSpace] = useState(0);
   const [peopleInSpaceMessage, setPeopleInSpaceMessage] = useState('');
+  const [catArticles, setCatArticles] = useState(0);
+  const [catArticlesMessage, setCatArticlesMessage] = useState('');
 
-  const getPeopleInSpace = () => {
-    fetch('/people-in-space').then(res => res.json()).then(data => {
-      setPeopleInSpace(data.number);
-      setPeopleInSpaceMessage(data.message);
-    })
-  }
-
-  const getMathFact = () => {
-    fetch('/math-fact').then(res => res.json()).then(data => {
-      setMathFact(data.number);
-      setMathFactMessage(data.message);
+  const getNumberFromApi = (endpoint, setState, setMessage) => {
+    fetch(endpoint).then(res => res.json()).then(data => {
+      setState(data.number);
+      setMessage(data.message);
     })
   }
 
   useEffect(() => {
-    getMathFact();
-    getPeopleInSpace();
+    getNumberFromApi('/math-fact', setMathFact, setMathFactMessage);
+    getNumberFromApi('/people-in-space', setPeopleInSpace, setPeopleInSpaceMessage);
+    getNumberFromApi('/news', setCatArticles, setCatArticlesMessage);
   }, []);
 
   return (
-    <div className="App">
-      <div>
+    <div className="App container">
+      <div className='container'>
         <div className='row'>
           <div className='col-12'>
             <h1> Happy numbers </h1>
           </div>
         </div>
         <div className='row'>
-          <div className='col-6'>
-            Tyle number 1
-            <p style={{ fontSize: '40px' }}>{mathFact} </p>
-            <p style={{ fontSize: '20px' }}>{mathFactMessage}</p>
+          <div className='col-6 tile'>
+            <p className='number'>{mathFact} </p>
+            <p className='message'>{mathFactMessage}</p>
           </div>
-          <div className='col-6'>
-            Tyle numer 2
-        <p style={{ fontSize: '40px' }}>{peopleInSpace}</p>
-            <p style={{ fontSize: '20px' }}>{peopleInSpaceMessage}</p>
+          <div className='col-6 tile'>
+            <p className='number'>{peopleInSpace}</p>
+            <p className='message'>{peopleInSpaceMessage}</p>
           </div>
         </div>
         <div className='row'>
-          <div className='col-6'>
-            Tyle number 3
+          <div className='col-6 tile'>
+            <p className='number'>{catArticles}</p>
+            <p className='message'>{catArticlesMessage}</p>
       </div>
-          <div className='col-6'>
-            Tyle numer 4
+          <div className='col-6 tile'>
+            Tile numer 4
       </div>
         </div>
       </div>
