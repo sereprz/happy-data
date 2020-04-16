@@ -25,3 +25,4 @@ yarn-error.log*
 # python virtual env
 api/happy-data
 api/__pycache__
+api/.env
